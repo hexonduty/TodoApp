@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.App {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+#todo{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.btnside{
+  display: flex;
+  gap: 5px;
+}
+
+.todoButton {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.todoButton:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoDelete {
+  padding: 4px 8px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todoDelete:hover {
+  background-color: #d32f2f;
+}
+
+.todoComplete{
+  padding: 4px 8px;
+  background-color: #45a049;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todoComplete:hover{
+  background-color: #4CAF50;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul .todoside{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+li {
+  width: 60%;
+  margin-top: 8px;
+  display: flex;
+  gap: 50px;
+  font-size: 16px;
+  line-height: 1.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.completed{
+  color: #45a049;
+  text-decoration: line-through;
+}
+
+.not{
+  color: red ;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer h2 a{
+  color: black;
 }
